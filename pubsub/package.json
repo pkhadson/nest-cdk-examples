@@ -24,12 +24,14 @@
     "diff:all": "cdk diff --all"
   },
   "dependencies": {
-    "@nest-cdk/core": "0.0.2-rc.17",
-    "@nest-cdk/pubsub": "0.0.2-rc.1",
+    "@aws-sdk/client-sns": "^3.470.0",
+    "@nest-cdk/core": "link:../../nest-apig/packages/core",
+    "@nest-cdk/pubsub": "link:../../nest-apig/packages/pubsub",
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
     "aws-cdk-lib": "^2.114.1",
+    "class-validator": "^0.14.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1"
   },

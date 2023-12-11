@@ -3,9 +3,7 @@ import { On, PubSubService } from '@nest-cdk/pubsub';
 
 @Injectable()
 export class AppService {
-  constructor(private readonly pubSubService: PubSubService) {
-    this.onTest({ a: 5 });
-  }
+  constructor(private readonly pubSubService: PubSubService) {}
 
   async getHello() {
     await this.pubSubService.emit('test', { msg: 'Hello World!' });

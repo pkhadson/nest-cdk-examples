@@ -7,6 +7,7 @@ module.exports = (options, webpack) => {
     "@nestjs/microservices",
     "@nestjs/microservices/microservices-module",
     "@nestjs/websockets/socket-module",
+    "class-validator",
     "class-transformer",
     "class-transformer/storage",
   ];

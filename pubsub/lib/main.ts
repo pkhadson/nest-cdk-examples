@@ -1,7 +1,7 @@
 import { defineConfig } from '@nest-cdk/core/register';
+import PubSubPlugin from '@nest-cdk/pubsub/register';
 import * as cdk from 'aws-cdk-lib';
 
-import pubsub from '@nest-cdk/pubsub/register';
 // import { RestApi } from 'aws-cdk-lib/aws-apigateway';
 // import { Construct } from 'constructs';
 
@@ -27,10 +27,5 @@ const app = new cdk.App();
 defineConfig({
   app,
   name: 'Pubsub',
-}).then((_instances) => {
-  const instances: any[] = _instances as unknown as any[];
-  console.log('instances', instances);
-  for (let i = 0; i < instances.length; i++) {
-    pubsub(instances[i]);
-  }
+  plugins: [new PubSubPlugin()],
 });
